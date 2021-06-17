@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', function() {
+    return view('home', [
+        'title' => 'CRYPTO TO THE MOON 🚀🚀🚀',
+        'caption' => 'We got diamond hands 💎🙌',
+        'cryptoselected' => ['ETC','DOGE','BTC'],
+        'currencyselected' => ['USD','EUR']
+    ]);
 });
